@@ -7,6 +7,7 @@ public class TestVertex {
 		Vertex v2 = new Vertex(42,0);
 		Vertex v3 = new Vertex(0,0);
 		System.out.println(v1);
+		
 	}
 
 }
