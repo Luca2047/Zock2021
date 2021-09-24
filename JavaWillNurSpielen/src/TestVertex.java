@@ -10,7 +10,10 @@ public class TestVertex {
 		System.out.println(v2);
 		System.out.println(v3);
 
-
+		System.out.println(2+5+10);
+		System.out.println(5+10+2);	
+		System.out.println("2"+"5"+"10");
+		System.out.println("2"+"10"+"5");
 		
 	}
 
