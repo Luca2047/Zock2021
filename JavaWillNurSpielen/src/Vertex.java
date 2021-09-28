@@ -9,8 +9,37 @@ public class Vertex {
 	}
 
 	public String toString() {
-
 		return "x = " + x + ", y = " + y;
+	}
+
+	public double lenght() {
+		return Math.sqrt(x * x + y * y);
+	}
+
+	public Vertex skalarMult(double s) {
+		return new Vertex(x * s, y * s);
+	}
+
+	public void skalarMultMod(double s) {
+		x = x * s;
+		y = y * s;
+	}
+
+	public Vertex add(Vertex v2) {
+		return new Vertex(x + v2.x, y + v2.y);
+	}
+
+	public void addMod(Vertex v2) {
+		x = x + v2.x;
+		y = y + v2.y;
+	}
+
+	public void setX(double x) {
+		this.x = x;
+	}
+	
+	public void setY(double y) {
+		this.y = y;
 	}
 
 }
