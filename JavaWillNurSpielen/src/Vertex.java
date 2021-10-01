@@ -9,11 +9,24 @@ public class Vertex {
 	}
 
 	public String toString() {
-		return "x = " + x + ", y = " + y;
+		return "(" + x + " , " + y + ")";
 	}
 
-	public double lenght() { // Abstand zum Ursprung (0,0)
+	public double length() { // Abstand zum Ursprung (0,0)
 		return Math.sqrt(x * x + y * y);
+	}
+
+	public double distance(Vertex v2) { // Abstand von Vektor v1 zu Vektor v2
+		double xx = v2.x - this.x;
+		double yy = v2.x - this.y;
+		return Math.sqrt(xx * xx + yy * yy);
+	}
+	
+	public void normalize() {	// Bringt den Betrag eines Vertex auf 1
+		double factor = this.length();
+		this.x = x / factor;
+		this.y = y / factor;
+		
 	}
 
 	public Vertex skalarMult(double s) { // Skalliert einen Vertex um s und erstellt einen neuen Vektor
@@ -32,6 +45,15 @@ public class Vertex {
 	public void addMod(Vertex v2) { // Addiert x und y von v2 auf den Vertex
 		x = x + v2.x;
 		y = y + v2.y;
+	}
+
+	public Vertex sub(Vertex v2) {
+		return new Vertex(x - v2.x, y - v2.y);
+	}
+
+	public void subMod(Vertex v2) {
+		x = x - v2.x;
+		y = y - v2.y;
 	}
 
 	public void setX(double x) {

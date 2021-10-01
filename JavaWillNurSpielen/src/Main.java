@@ -9,12 +9,16 @@ public class Main {
 		Vertex v4 = new Vertex(42, 23);
 
 		System.out.println(v2);
-		System.out.println(v1.lenght());
-		System.out.println(v2.lenght());
-		System.out.println(v3.lenght());
+		System.out.println(v1.length());
+		System.out.println(v2.length());
+		System.out.println(v3.length());
 		System.out.println(v1.skalarMult(0.8));
 
 		System.out.println(v2.equals(v4));
+		System.out.println(v1.equals(v2));
+		
+		System.out.println(v1.distance(v2));
+		
 	}
 
 }
