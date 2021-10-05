@@ -34,6 +34,17 @@ public class GeometricObject {
 		this(10);
 	}
 	
+	public String toString() {
+		return "width = " + width + " height = " + height + "pos = " + pos;
+	}
+	
+	public double circumference() {
+		return 2*(width+height);
+	}
+	
+	public double area() {
+		return height*width;
+	}
 
 	public double getWidth() {
 		return width;

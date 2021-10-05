@@ -8,7 +8,7 @@ public class Main {
 		Vertex v3 = new Vertex(0, 0);
 		Vertex v4 = new Vertex(42, 23);
 		
-		
+		GeometricObject o1 = new GeometricObject(2,4,v1);
 
 		System.out.println(v2);
 		System.out.println(v1.length());
