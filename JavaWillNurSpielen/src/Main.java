@@ -10,7 +10,7 @@ public class Main {
 		
 		GeometricObject o1 = new GeometricObject(2,4,v1);
 
-		System.out.println(v2);
+		System.out.println(o1);
 		System.out.println(v1.length());
 		System.out.println(v2.length());
 		System.out.println(v3.length());
