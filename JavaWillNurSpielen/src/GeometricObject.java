@@ -29,21 +29,21 @@ public class GeometricObject {
 	public GeometricObject(double w) {
 		this(w, w);
 	}
-	
+
 	public GeometricObject() {
 		this(10);
 	}
-	
+
 	public String toString() {
 		return "width = " + width + " height = " + height + " pos = " + pos;
 	}
-	
+
 	public double circumference() {
-		return 2*(width+height);
+		return 2 * (width + height);
 	}
-	
+
 	public double area() {
-		return height*width;
+		return height * width;
 	}
 
 	public double getWidth() {
@@ -56,6 +56,30 @@ public class GeometricObject {
 
 	public Vertex getPos() {
 		return pos;
+	}
+
+	public boolean isLargerThan(GeometricObject that) {
+		return this.area() > that.area();
+	}
+
+	public void moveTo(Vertex pos) {
+		this.pos = pos;
+	}
+
+	public void moveToVertex(double x, double y) {
+		moveTo(new Vertex(x, y));
+	}
+
+	public void move(Vertex v) {
+		moveTo(pos.add(v));
+	}
+
+	public boolean equals(Object thatObject) {
+		if (thatObject instanceof GeometricObject) {
+			GeometricObject that = (GeometricObject) thatObject;
+			return that.width == this.width && that.height == this.height && that.pos.equals(this.pos);
+		}
+		return false;
 	}
 
 }
