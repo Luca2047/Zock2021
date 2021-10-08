@@ -62,16 +62,16 @@ public class GeometricObject {
 		return this.area() > that.area();
 	}
 
-	public void moveTo(Vertex pos) {
+	public void moveToVertex(Vertex pos) {
 		this.pos = pos;
 	}
 
-	public void moveToVertex(double x, double y) {
-		moveTo(new Vertex(x, y));
+	public void moveTo(double x, double y) {
+		moveToVertex(new Vertex(x, y));
 	}
 
 	public void move(Vertex v) {
-		moveTo(pos.add(v));
+		moveToVertex(pos.add(v));
 	}
 
 	public boolean equals(Object thatObject) {
