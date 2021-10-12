@@ -10,6 +10,9 @@ public class Main {
 		
 		Vertex v1 = new Vertex(4,4);
 		System.out.println(o2.contains(v1));
+		
+		SimpleOval s1 = new SimpleOval(4,4,v1);
+		System.out.println(s1);
 
 		/*System.out.println(o1.equals(o2));
 		o2.moveTo(42, 23);
