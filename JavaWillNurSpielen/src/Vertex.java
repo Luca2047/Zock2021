@@ -21,12 +21,12 @@ public class Vertex {
 		double yy = v2.x - this.y;
 		return Math.sqrt(xx * xx + yy * yy);
 	}
-	
-	public void normalize() {	// Bringt den Betrag eines Vertex auf 1
+
+	public void normalize() { // Bringt den Betrag eines Vertex auf 1
 		double factor = this.length();
 		this.x = x / factor;
 		this.y = y / factor;
-		
+
 	}
 
 	public Vertex skalarMult(double s) { // Skalliert einen Vertex um s und erstellt einen neuen Vektor
