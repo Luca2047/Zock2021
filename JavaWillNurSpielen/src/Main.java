@@ -14,7 +14,7 @@ public class Main {
 		Schaeferhund h1 = new Schaeferhund("Hund", 3, 31.4);
 		System.out.println(h1.getLautstaerkeDB());*/
 		
-		ShowInFrame.show(new SimpleSizedPanel());
+		ShowInFrame.show(new PaintablePanel(new PaintableOval(100,50,30,45)));
 
 	}
 
